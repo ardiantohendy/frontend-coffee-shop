@@ -48,7 +48,6 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-        <div className="mid"></div>
       </div>
     </>
   );
