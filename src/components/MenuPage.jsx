@@ -32,14 +32,17 @@ const MenuPage = () => {
             </button>
           ))}
         </div>
-        <div className="menu-list">
-          {menuList // filter berdasarkan kategori aktif
+        <div className="menuList">
+          {menuList
+            .filter((item) => item.category === activeCategory)
             .map((item) => (
-              <div key={item.id} className="menu-item">
-                <img src={item.image} alt={item.name} className="menu-image" />
-                <h3>{item.name}</h3>
-                <p>{item.description}</p>
-                <p>Rp {item.price}</p>
+              <div key={item.id} className="menuItem">
+                <img src={item.image} alt={item.name} className="menuImage" />
+                <div className="menuText">
+                  <p className="title">{item.name}</p>
+                  <p className="desc">{item.description}</p>
+                  <p className="price">Rp {item.price}</p>
+                </div>
               </div>
             ))}
         </div>

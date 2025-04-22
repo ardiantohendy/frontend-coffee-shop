@@ -28,7 +28,7 @@
   background-color: #795757;
   padding: 0.8rem 1.5rem;
   font-weight: 300;
-  transition: 0.2s;
+  transition: 0.5s;
 }
 
 .menuPage .category-buttons button:hover {
@@ -39,4 +39,46 @@
 .menuPage .category-buttons button.active {
   color: #795757;
   background-color: #e9dcbf;
+  margin-bottom: 3em;
+}
+
+.menuPage .menuList {
+  display: flex;
+}
+
+.menuPage .menuList .menuItem img.menuImage {
+  width: 100%;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.menuPage .menuList .menuItem {
+  width: 15em;
+  background-color: #d9d4cb;
+  margin: 0 0.5em 0 0;
+  border-radius: 8px;
+}
+
+.menuPage .menuList .menuItem .menuText {
+  padding: 1em 1em 1.5em 1em;
+}
+
+.menuPage .menuList .menuItem .menuText p.title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #795757;
+  margin-bottom: 0.8rem;
+}
+
+.menuPage .menuList .menuItem .menuText p.desc {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #795757;
+  margin-bottom: 1em;
+}
+
+.menuPage .menuList .menuItem .menuText p.price {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #795757;
 }
