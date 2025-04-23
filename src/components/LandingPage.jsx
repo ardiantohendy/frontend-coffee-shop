@@ -23,6 +23,12 @@ const LandingPage = () => {
                 <li>
                   <a href="#">Book</a>
                 </li>
+                <li>
+                  <button type="button">Log in</button>
+                </li>
+                <li>
+                  <button type="button">Sign in</button>
+                </li>
               </ul>
             </div>
           </header>

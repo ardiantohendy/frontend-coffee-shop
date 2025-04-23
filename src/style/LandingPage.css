@@ -20,7 +20,7 @@ body .top {
 .top header {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 7rem;
+  padding: 2rem 2rem 2rem 7rem;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -38,14 +38,37 @@ body .top {
 
 .top header .headMenu ul li {
   display: inline-block;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
 }
 
 .top header .headMenu ul li a {
   text-decoration: none;
   color: #d3c098;
-  font-size: 1rem;
   font-weight: 300;
+  font-size: 0.9rem;
+  font-family: "Roboto", sans-serif;
+  transition: 0.2s;
+}
+
+.top header .headMenu ul li a:hover {
+  color: #887b60;
+}
+
+.top header .headMenu ul li button {
+  cursor: pointer;
+  color: #795757;
+  background-color: #e9dcbf;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.top header .headMenu ul li button:hover {
+  color: #ede5d3;
+  background-color: #795757;
 }
 
 .top .content {
@@ -80,6 +103,7 @@ body .top {
   color: #795757;
   background-color: #e9dcbf;
   padding: 0.8rem 3rem;
+  font-size: 0.9rem;
   font-weight: 300;
   text-decoration: none;
   transition: 0.2s;
