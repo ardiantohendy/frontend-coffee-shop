@@ -9,7 +9,8 @@
 
 .menuPage {
   width: 100%;
-  height: 100vh;
+  height: fit-content;
+  min-height: 100vh;
   background-color: #ece6dc;
   padding: 2.5rem 7rem;
 }
@@ -18,6 +19,12 @@
   font-size: 4rem;
   font-weight: 600;
   color: #795757;
+}
+
+.menuPage .category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3em;
 }
 
 .menuPage .category-buttons button {
@@ -39,42 +46,47 @@
 .menuPage .category-buttons button.active {
   color: #795757;
   background-color: #e9dcbf;
-  margin-bottom: 3em;
 }
 
 .menuPage .menuList {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .menuPage .menuList .menuItem img.menuImage {
   width: 100%;
+  height: 55%;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
+  object-fit: cover;
 }
 
 .menuPage .menuList .menuItem {
   width: 15em;
+  height: 20em;
   background-color: #d9d4cb;
-  margin: 0 0.5em 0 0;
+  margin: 0 0.5em 0.5em 0;
   border-radius: 8px;
 }
 
 .menuPage .menuList .menuItem .menuText {
-  padding: 1em 1em 1.5em 1em;
+  padding: 0.5em 1em 1.5em 1em;
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .menuPage .menuList .menuItem .menuText p.title {
   font-size: 1.2rem;
   font-weight: 600;
   color: #795757;
-  margin-bottom: 0.8rem;
 }
 
 .menuPage .menuList .menuItem .menuText p.desc {
   font-size: 0.8rem;
   font-weight: 300;
   color: #795757;
-  margin-bottom: 1em;
 }
 
 .menuPage .menuList .menuItem .menuText p.price {
