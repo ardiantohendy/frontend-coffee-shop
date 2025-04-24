@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.loginPage {
+  width: 100%;
+  height: 100vh;
+  background-color: #241f1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginPage .container {
+  width: 20em;
+  height: fit-content;
+  background-color: #ede5d3;
+  padding: 2rem 1.5rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container p.title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #795757;
+}
+
+.container p.text {
+  margin: 1rem 0 2rem;
+  font-size: 0.9em;
+  color: #795757;
+  font-weight: 300;
+}
+
+.container form .username,
+.container form .password {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9em;
+  color: #795757;
+  margin-bottom: 0.5rem;
+}
+
+.container form input {
+  padding: 0.7rem 0.5rem;
+  border: 1.5px solid #795757;
+}
+
+.container form .buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+
+.container form button {
+  width: 100%;
+  cursor: pointer;
+  color: #ede5d3;
+  background-color: #795757;
+  border: none;
+
+  padding: 0.5rem 0;
+  font-size: 0.9em;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  transition: 0.2s;
+}
+
+.container form button:hover {
+  color: #795757;
+  background-color: #ede5d3;
+}
+
+.container p.register {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9em;
+  font-weight: 300;
+  color: #795757;
+}
+
+.container p.register a {
+  text-decoration: none;
+  color: #795757;
+}
+
+/* .container form {
+  margin: 2em 0em;
+} */
