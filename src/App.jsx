@@ -1,13 +1,16 @@
 import "./App.css";
-import LandingPage from "./components/LandingPage";
-import MenuPage from "./components/MenuPage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LoginPage from "./components/LoginPage";
+import MainPage from "./components/MainPage";
 
 function App() {
   return (
-    <>
-      <LandingPage />
-      <MenuPage />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
+    </Router>
   );
 }
 
