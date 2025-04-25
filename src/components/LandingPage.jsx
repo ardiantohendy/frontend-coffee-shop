@@ -1,8 +1,33 @@
 import "../style/LandingPage.css";
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { logout } from "../api/Api";
 
 const LandingPage = () => {
   const navigate = useNavigate();
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("access");
+    if (token) {
+      setIsAuthenticated(true);
+    } else {
+      setIsAuthenticated(false);
+    }
+  }, []);
+
+  const handleLogOut = async () => {
+    try {
+      await logout(localStorage.getItem("refresh"));
+      localStorage.removeItem("access");
+      localStorage.removeItem("refresh");
+      alert("Logged out successfully!");
+      navigate("/login");
+    } catch (error) {
+      console.log("Logout failed", error);
+    }
+  };
+
   return (
     <>
       <div className="landingPage">
@@ -25,14 +50,29 @@ const LandingPage = () => {
                 <li>
                   <a href="#">Book</a>
                 </li>
-                <li>
-                  <button type="button" onClick={() => navigate("/login")}>
-                    Log in
-                  </button>
-                </li>
-                <li>
-                  <button type="button">Sign in</button>
-                </li>
+                {isAuthenticated ? (
+                  <>
+                    <li>
+                      <button type="button">Cart</button>
+                    </li>
+                    <li>
+                      <button type="button" onClick={handleLogOut}>
+                        Log out
+                      </button>
+                    </li>
+                  </>
+                ) : (
+                  <>
+                    <li>
+                      <button type="button" onClick={() => navigate("/login")}>
+                        Log in
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button">Sign up</button>
+                    </li>
+                  </>
+                )}
               </ul>
             </div>
           </header>
