@@ -26,3 +26,11 @@ export const logout = async (refreshToken) => {
     console.error("Error", error);
   }
 };
+
+export const register = async (userData) => {
+  try {
+    return await axios.post(API_URL + "users/register/", userData);
+  } catch (error) {
+    console.error("Error register", error);
+  }
+};

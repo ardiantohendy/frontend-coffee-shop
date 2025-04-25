@@ -49,7 +49,7 @@ const LoginPage = () => {
             </div>
           </form>
           <p className="register">
-            Do not have any account yet? <a href="#">register</a>
+            Do not have any account yet? <a onClick={() => navigate("/register")}>register</a> instead
           </p>
         </div>
       </div>

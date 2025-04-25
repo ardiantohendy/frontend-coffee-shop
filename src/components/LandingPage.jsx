@@ -69,7 +69,9 @@ const LandingPage = () => {
                       </button>
                     </li>
                     <li>
-                      <button type="button">Sign up</button>
+                      <button type="button" onClick={() => navigate("/register")}>
+                        Sign up
+                      </button>
                     </li>
                   </>
                 )}
