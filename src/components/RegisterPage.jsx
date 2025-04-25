@@ -27,6 +27,7 @@ const RegisterPage = () => {
       });
       navigate("/login");
     } catch (error) {
+      console.log("Full error response:", error.response.data);
       if (error.response && error.response.data) {
         setErrors(error.response.data);
       } else {

@@ -6,6 +6,7 @@ import "../style/LoginPage.css";
 const LoginPage = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({ username: "", password: "" });
+  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
@@ -13,6 +14,8 @@ const LoginPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrors({});
+
     try {
       const response = await login(user);
       localStorage.setItem("access", response.data.access);
@@ -24,7 +27,12 @@ const LoginPage = () => {
       });
       navigate("/");
     } catch (error) {
-      console.log("Log in failed", error);
+      console.log("Full error response:", error.response.data);
+      if (error.response && error.response.data) {
+        setErrors(error.response.data);
+      } else {
+        setErrors({ detail: "Something went wrong" });
+      }
     }
   };
 
@@ -36,12 +44,11 @@ const LoginPage = () => {
           <p className="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa delectus molestias explicabo enim sed distinctio voluptatibus inventore facere alias iusto.</p>
           <form onSubmit={handleSubmit}>
             <div className="username">
-              {/* <label>Username:</label> */}
               <input type="text" name="username" placeholder="Username" value={user.username} onChange={handleChange} />
             </div>
             <div className="password">
-              {/* <label>Password:</label> */}
               <input type="password" name="password" placeholder="Password" value={user.password} onChange={handleChange} />
+              {errors.detail && <p className="error">{errors.detail}</p>}
             </div>
             <div className="buttons">
               <button type="submit">Log in</button>

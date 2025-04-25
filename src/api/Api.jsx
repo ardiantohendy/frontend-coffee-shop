@@ -16,6 +16,7 @@ export const login = async (userData) => {
     return await axios.post(API_URL + "users/login/", userData);
   } catch (error) {
     console.error("Error login " + error);
+    throw error;
   }
 };
 
@@ -32,5 +33,6 @@ export const register = async (userData) => {
     return await axios.post(API_URL + "users/register/", userData);
   } catch (error) {
     console.error("Error register", error);
+    throw error;
   }
 };
