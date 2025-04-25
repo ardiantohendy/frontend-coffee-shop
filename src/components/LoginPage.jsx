@@ -1,10 +1,32 @@
 import { useNavigate } from "react-router-dom";
-// import { useState } from "react";
+import { useState } from "react";
+import { login } from "../api/Api";
 import "../style/LoginPage.css";
 
 const LoginPage = () => {
   const navigate = useNavigate();
-  //   const [user, setUser] = useState({ username: "", password: "" });
+  const [user, setUser] = useState({ username: "", password: "" });
+
+  const handleChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await login(user);
+      localStorage.setItem("access", response.data.access);
+      localStorage.setItem("refresh", response.data.refresh);
+      console.log("Log in success");
+      setUser({
+        username: "",
+        password: "",
+      });
+      navigate("/");
+    } catch (error) {
+      console.log("Log in failed", error);
+    }
+  };
 
   return (
     <>
@@ -12,14 +34,14 @@ const LoginPage = () => {
         <div className="container">
           <p className="title">Welcome to CoffeePaste.</p>
           <p className="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa delectus molestias explicabo enim sed distinctio voluptatibus inventore facere alias iusto.</p>
-          <form action="">
+          <form onSubmit={handleSubmit}>
             <div className="username">
               {/* <label>Username:</label> */}
-              <input type="text" name="username" placeholder="Username" />
+              <input type="text" name="username" placeholder="Username" value={user.username} onChange={handleChange} />
             </div>
             <div className="password">
               {/* <label>Password:</label> */}
-              <input type="text" name="password" placeholder="Password" />
+              <input type="password" name="password" placeholder="Password" value={user.password} onChange={handleChange} />
             </div>
             <div className="buttons">
               <button type="submit">Log in</button>
