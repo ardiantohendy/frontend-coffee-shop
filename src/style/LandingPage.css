@@ -113,3 +113,12 @@ body .top {
   color: #ede5d3;
   background-color: #795757;
 }
+
+.landingPage .cart {
+  width: 30%;
+  height: 100vh;
+  background-color: #887b60;
+  position: absolute;
+  top: -100%;
+  right: 0;
+}

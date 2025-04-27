@@ -36,3 +36,12 @@ export const register = async (userData) => {
     throw error;
   }
 };
+
+export const order = async (orderData) => {
+  try {
+    return await axios.post(API_URL + "order/orders/", orderData);
+  } catch (error) {
+    console.error("Error order", error);
+    throw error;
+  }
+};

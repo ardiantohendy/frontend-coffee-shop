@@ -100,6 +100,9 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
+        <div className="cart">
+          <h1>THIS IS A SHOPPING CART</h1>
+        </div>
       </div>
     </>
   );
