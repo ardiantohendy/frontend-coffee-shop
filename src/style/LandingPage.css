@@ -110,15 +110,63 @@ body .top {
 }
 
 .top .content .btn a:hover {
-  color: #ede5d3;
+  color: #dcd4c2;
   background-color: #795757;
 }
 
 .landingPage .cart {
   width: 30%;
   height: 100vh;
-  background-color: #887b60;
+  background-color: #dbd7cf;
   position: absolute;
   top: -100%;
   right: 0;
+  transition: 0.3s;
+  padding: 1.5rem 2rem;
+}
+
+.landingPage .cart.open {
+  top: 0;
+}
+
+.landingPage .cart button.exit {
+  padding: 0.8rem 1.5rem;
+  font-weight: 300;
+  background-color: rgb(226, 114, 114);
+  border: none;
+  color: #e6e2da;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.landingPage .cart button.exit:hover {
+  background-color: rgb(237, 82, 82);
+}
+
+.landingPage .cart .topCart {
+  display: flex;
+  padding: 1.5rem 0 0.8rem 0;
+  justify-content: space-between;
+}
+
+.landingPage .cart .topCart p {
+  color: #795757;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.landingPage .cart .midCart button {
+  margin: 0rem 1rem 0 0;
+  border: none;
+  cursor: pointer;
+  color: #ede5d3;
+  background-color: #795757;
+  padding: 0.8rem 1.5rem;
+  font-weight: 300;
+  transition: 0.2s;
+}
+
+.landingPage .cart .midCart button:hover {
+  color: #795757;
+  background-color: #e9dcbf;
 }

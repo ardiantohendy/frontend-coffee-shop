@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { logout } from "../api/Api";
 
 const LandingPage = () => {
+  const categories = ["Belum Bayar", "Sudah Bayar"];
+  const [activeCategory, setActiveCategory] = useState("Belum Bayar");
   const navigate = useNavigate();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -15,6 +17,12 @@ const LandingPage = () => {
       setIsAuthenticated(false);
     }
   }, []);
+
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
 
   const handleLogOut = async () => {
     try {
@@ -53,7 +61,9 @@ const LandingPage = () => {
                 {isAuthenticated ? (
                   <>
                     <li>
-                      <button type="button">Cart</button>
+                      <button type="button" onClick={toggleCart}>
+                        Cart
+                      </button>
                     </li>
                     <li>
                       <button type="button" onClick={handleLogOut}>
@@ -100,8 +110,21 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-        <div className="cart">
-          <h1>THIS IS A SHOPPING CART</h1>
+        <div className={`cart ${isCartOpen ? "open" : ""}`}>
+          <button className="exit" type="button" onClick={toggleCart}>
+            Exit
+          </button>
+          <div className="topCart">
+            <p>Shopping Cart</p>
+            <p>0 Item/s</p>
+          </div>
+          <div className="midCart">
+            {categories.map((category) => (
+              <button key={category} className={category === activeCategory ? "active" : ""} onClick={() => setActiveCategory(category)}>
+                {category}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </>
