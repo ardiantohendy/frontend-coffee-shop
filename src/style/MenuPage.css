@@ -11,14 +11,14 @@
   width: 100%;
   height: fit-content;
   min-height: 100vh;
-  background-color: #ece6dc;
+  background-color: #1e1d1c;
   padding: 2.5rem 7rem;
 }
 
 .menuPage .title p {
   font-size: 4rem;
   font-weight: 600;
-  color: #795757;
+  color: #e1d3b8;
 }
 
 .menuPage .category-buttons {
@@ -32,25 +32,33 @@
   border: none;
   cursor: pointer;
   color: #ede5d3;
-  background-color: #795757;
+  background-color: #4c3939;
   padding: 0.8rem 1.5rem;
   font-weight: 300;
   transition: 0.2s;
 }
 
 .menuPage .category-buttons button:hover {
-  color: #795757;
+  color: #4c3939;
   background-color: #e9dcbf;
 }
 
 .menuPage .category-buttons button.active {
-  color: #795757;
+  color: #4c3939;
   background-color: #e9dcbf;
+}
+
+.menuPage .outerMenu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .menuPage .menuList {
   display: flex;
   flex-wrap: wrap;
+  margin: auto;
+  width: 80em;
 }
 
 .menuPage .menuList .menuItem img.menuImage {
@@ -62,9 +70,9 @@
 }
 
 .menuPage .menuList .menuItem {
-  width: 15em;
+  width: 15.5em;
   height: 20em;
-  background-color: #d9d4cb;
+  background-color: #f5f1eb;
   margin: 0 0.5em 0.5em 0;
   border-radius: 8px;
   cursor: pointer;
@@ -81,19 +89,19 @@
 .menuPage .menuList .menuItem .menuText p.title {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #795757;
+  color: #4c3939;
 }
 
 .menuPage .menuList .menuItem .menuText p.desc {
   font-size: 0.8rem;
   font-weight: 300;
-  color: #795757;
+  color: #4c3939;
 }
 
 .menuPage .menuList .menuItem .menuText p.price {
   font-size: 1rem;
   font-weight: 500;
-  color: #795757;
+  color: #4c3939;
 }
 
 .menuPage .popup-overlay {
@@ -110,7 +118,7 @@
 }
 
 .menuPage .popup-overlay .popup {
-  background: #d9d4cb;
+  background: #f5f1eb;
   padding: 2rem;
   border-radius: 10px;
   width: 350px;
@@ -131,28 +139,28 @@
 .popup .menuTextSelected p.title {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #795757;
+  color: #4c3939;
 }
 
 .popup .menuTextSelected p.desc {
   font-size: 0.9rem;
   font-weight: 300;
-  color: #795757;
+  color: #4c3939;
   margin: 1rem 0;
 }
 
 .add-to-cart {
   margin-top: 1rem;
   color: #ede5d3;
-  background-color: #795757;
-  padding: 0.5rem 1rem;
+  background-color: #4c3939;
+  padding: 0.8rem 1.5rem;
   border: none;
   cursor: pointer;
   transition: 0.2s;
 }
 
 .add-to-cart:hover {
-  color: #795757;
+  color: #4c3939;
   background-color: #ede5d3;
 }
 
@@ -160,13 +168,14 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .menuPage .popup-overlay .quantity-wrapper p.price {
   font-size: 1rem;
   font-weight: 500;
-  color: #795757;
+  color: #4c3939;
 }
 
 .menuPage .popup-overlay .quantity-wrapper input {

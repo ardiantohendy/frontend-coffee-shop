@@ -56,7 +56,7 @@ body .top {
 
 .top header .headMenu ul li button {
   cursor: pointer;
-  color: #795757;
+  color: #4c3939;
   background-color: #e9dcbf;
   border: none;
   font-family: "Roboto", sans-serif;
@@ -68,7 +68,7 @@ body .top {
 
 .top header .headMenu ul li button:hover {
   color: #ede5d3;
-  background-color: #795757;
+  background-color: #4c3939;
 }
 
 .top .content {
@@ -100,7 +100,7 @@ body .top {
 }
 
 .top .content .btn a {
-  color: #795757;
+  color: #4c3939;
   background-color: #e9dcbf;
   padding: 0.8rem 3rem;
   font-size: 0.9rem;
@@ -111,7 +111,7 @@ body .top {
 
 .top .content .btn a:hover {
   color: #dcd4c2;
-  background-color: #795757;
+  background-color: #4c3939;
 }
 
 .landingPage .cart {
@@ -150,7 +150,7 @@ body .top {
 }
 
 .landingPage .cart .topCart p {
-  color: #795757;
+  color: #4c3939;
   font-size: 1.3rem;
   font-weight: 500;
 }
@@ -160,13 +160,13 @@ body .top {
   border: none;
   cursor: pointer;
   color: #ede5d3;
-  background-color: #795757;
+  background-color: #4c3939;
   padding: 0.8rem 1.5rem;
   font-weight: 300;
   transition: 0.2s;
 }
 
 .landingPage .cart .midCart button:hover {
-  color: #795757;
+  color: #4c3939;
   background-color: #e9dcbf;
 }
